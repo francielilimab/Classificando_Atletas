@@ -5,6 +5,9 @@ ano = date.today().year
 while True:
     nascimento = int(input('Digite o ano de nascimento: '))
     idade = ano - nascimento
+    print('\033[1m>>>> Verificando <<<<\033[m')
+    sleep(1)
+    print('-'*35)
     print(f'O atleta tem {ano - nascimento} anos.')
     if idade <= 9:
         print('Está na categoria \033[1MMIRIM!\033[m')
@@ -24,7 +27,7 @@ while True:
         else:
             print('Por favor digite apenas S ou N.')
     if resp in 'N':
-        print('Finalizando...')
+        print('\033[1mFinalizando...\033[m')
         sleep(1)
         break
 print('='*40)
